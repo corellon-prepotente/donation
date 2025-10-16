@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate to Support Us</title>
+
+  <!-- ✅ Part 1: PayPal SDK -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAMLzUGQK5IoE_7NEpeGZrdv_uAlCamCSTMj8nXIHwLHw_Iyj3czgStVUOXJ2GcKnq9v68J6sVouIN9KM&components=hosted-buttons&disable-funding=venmo&currency=USD">
+  </script>
+
+  <!-- Basic Styling (optional) -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .donation-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="donation-box">
+    <h1>Support Us</h1>
+    <p>Your donation helps keep our project alive ❤️</p>
+
+    <!-- ✅ Part 2: PayPal Button -->
+    <div id="paypal-container-PH2PHKHLPUDQN"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "PH2PHKHLPUDQN",
+      }).render("#paypal-container-PH2PHKHLPUDQN")
+    </script>
+  </div>
+
+</body>
+</html>
